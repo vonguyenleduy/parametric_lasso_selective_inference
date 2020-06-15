@@ -36,18 +36,18 @@ def construct_A_XA_Ac_XAc_bhA(X, bh, n, p):
     return A, XA, Ac, XAc, bhA
 
 
-def check_KKT(XA, XAc, y, bhA, lamda):
+def check_KKT(XA, XAc, y, bhA, lamda, n):
 
     print("\nCheck Active")
     e1 = y - np.dot(XA, bhA)
     e2 = np.dot(XA.T, e1)
-    print(e2/lamda)
+    print(e2/ (lamda * n))
 
     if XAc is not None:
         print("\nCheck In Active")
         e1 = y - np.dot(XA, bhA)
         e2 = np.dot(XAc.T, e1)
-        print(e2 / lamda)
+        print(e2/ (lamda * n))
 
 
 def construct_test_statistic(j, XA, y, A):
