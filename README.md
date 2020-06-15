@@ -42,7 +42,7 @@ The following commands are run from the terminal.
 >> python ex3_confidence_interval.py
 ```
 
-- Example for computing p-value when additional consider selection event of tuning hyperparameter
+- Example for computing p-value when additionally considering the selection event of tuning hyperparameter
 ```
 >> python ex4_test_with_cross_validation_event.py
 ```
