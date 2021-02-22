@@ -375,7 +375,7 @@ def run():
 
         pivot = util.pivot_with_specified_interval(z_interval, etaj, etajTy, cov, 0)
 
-        p_value =  2 * min(1 - pivot, pivot)
+        p_value = 2 * min(1 - pivot, pivot)
 
         print('Feature', j_selected + 1, ' True Beta:', beta_vec[j_selected], ' p-value:', '{:.4f}'.format(p_value))
         print("==========")

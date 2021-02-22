@@ -20,7 +20,7 @@ def parametric_elastic_net(X, yz, lamda, delta, b, n, p):
     l1_ratio_for_elastic_net = lamda / (lamda + delta)
 
     regr = ElasticNet(alpha=alpha_for_elastic_net, l1_ratio=l1_ratio_for_elastic_net,
-                      fit_intercept=False, normalize=False)
+                      fit_intercept=False, normalize=False, tol=1e-10)
 
     regr.fit(X, yz)
     bhz = regr.coef_

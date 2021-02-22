@@ -28,8 +28,6 @@ def run():
     if len(A) == 0:
         return None
 
-    y = y.reshape((n, 1))
-
     for j_selected in A:
         etaj, etajTy = util.construct_test_statistic(j_selected, XA, y, A)
 

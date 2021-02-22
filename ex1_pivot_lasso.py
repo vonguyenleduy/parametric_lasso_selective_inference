@@ -20,7 +20,7 @@ def run():
 
     X, y, true_y = gen_data.generate(n, p, beta_vec)
 
-    clf = linear_model.Lasso(alpha=lamda, fit_intercept=False, normalize=False)
+    clf = linear_model.Lasso(alpha=lamda, fit_intercept=False, normalize=False, tol=1e-10)
     clf.fit(X, y)
     bh = clf.coef_
 
@@ -31,8 +31,6 @@ def run():
 
     if len(A) == 0:
         return None
-
-    y = y.reshape((n, 1))
 
     rand_value = np.random.randint(len(A))
     j_selected = A[rand_value]
@@ -59,7 +57,7 @@ if __name__ == '__main__':
 
     plt.rcParams.update({'font.size': 18})
     grid = np.linspace(0, 1, 101)
-    plt.plot(grid, sm.distributions.ECDF(np.array(list_pivot))(grid), 'r-', linewidth=5, label='Pivot Lasso TN-A')
+    plt.plot(grid, sm.distributions.ECDF(np.array(list_pivot))(grid), 'r-', linewidth=6, label='Pivot Lasso TN-A')
     plt.plot([0, 1], [0, 1], 'k--')
     plt.legend()
     plt.tight_layout()
