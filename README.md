@@ -1,6 +1,6 @@
 # Parametric Programming Approach for More Powerful and General Lasso Selective Inference (AISTATS 2021)
 
-This package implements a parametric programming approach for more powerful and general Lasso Selective Inference (SI). The main idea is to compute the continuum path of Lasso solutions in the direction of the selected test statistic, and identify the subset of the data space corresponding to the feature selection event by following the solution path. The proposed parametric programming-based method not only avoids all the drawback of current Lasso SI methods but also improves the performance and practicality of SI for Lasso in various respects.
+This package implements a parametric programming approach for more powerful and general Lasso Selective Inference (SI). The main idea is to compute the continuum path of Lasso solutions in the direction of the selected test statistic, and identify the subset of the data space corresponding to the feature selection event by following the solution path. The proposed parametric programming-based method not only avoids all the drawbacks of current Lasso SI methods but also improves the performance and practicality of SI for Lasso in various respects.
 
 See the paper <https://arxiv.org/abs/2004.09749> for more details.
 
